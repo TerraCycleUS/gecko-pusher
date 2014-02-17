@@ -104,7 +104,7 @@ describe Gecko::Pusher::Channel::Map do
           point: [
             {host: "gecko.dsci.it", size: 8},
             {ip: "1.2.3.4", color: "ff0000"},
-            {latitude: "51.0001",longitude: "-51.0001", cssClass: "classname"}
+            {latitude: "51.0001",longitude: "-51.0001", cssclass: "classname"}
           ]
         }
       }
@@ -112,7 +112,7 @@ describe Gecko::Pusher::Channel::Map do
       @channel.push(
         ["gecko.dsci.it", {size: 8}],
         ["1.2.3.4", {color: "ff0000"}],
-        [[51.0001, -51.0001], {cssClass: "classname"}]
+        [[51.0001, -51.0001], {cssclass: "classname"}]
       )
       stub.should have_been_requested
 

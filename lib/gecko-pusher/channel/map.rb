@@ -31,7 +31,7 @@ module Gecko
 
           def check_options(options)
             raise ArgumentError unless options.keys.all? {|k|
-              [:color, :size, :cssClass].include?(k)
+              [:color, :size, :cssclass].include?(k)
             }
             options
           end
