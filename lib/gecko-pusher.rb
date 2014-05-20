@@ -32,7 +32,7 @@ module Gecko
       end
 
       def connection
-        @connection ||= Faraday.new(:url => "https://push.geckoboard.com") do |builder|
+        @connection ||= Faraday.new(:url => "https://push.geckoboard.com", :ssl => {:verify => false}) do |builder|
           builder.adapter :net_http
         end
       end
